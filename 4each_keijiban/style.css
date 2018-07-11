@@ -1,0 +1,121 @@
+.logo{
+    width:25%;
+}
+.topmenu{
+    background-color:black;
+    height:45px;
+    width:100%;
+}
+
+.main{
+    float:left;
+}
+header ul li{
+    float:left;
+    list-style:none;
+    color:white;
+    margin-top:10px;
+    margin-right:50px;
+    font-size:15px;
+}
+
+
+.leftcontainer{
+    width:70%;
+     float:left;
+}
+
+
+.rightcontainer{
+    float:left;
+    width:30%;
+}
+
+.submit{
+    background-color:lightgray;
+    color:white;
+    border-radius:5px;
+    border-bottom:solid 2px gray;
+    padding:4px 10px;
+}
+
+.contactbox{
+    background-color:whitesmoke;
+    border:2px solid lightgray;
+    width:90%;
+}
+
+.kiji{
+    background-color:whitesmoke;
+    border:2px solid lightgray;
+    width:90%;
+    border-radius:3px;
+    margin-top:5px;
+    padding-left:10px;
+}
+.kiji h3{
+    border-bottom:2px solid lightgray;
+    width:70%;
+}
+
+.form{
+    padding-top:16px;
+    padding-left:10px;
+}
+
+
+
+.rightcontainer h1{
+    border-bottom:dotted;
+    font-size:33px
+    
+    
+}
+.kizilist ul{
+    list-style-type:none;
+    position:relative;
+    top:-55px;
+    left:-40px;
+    font-size:17px;
+}
+.kizilist ul li{
+    line-height:2;
+}
+footer{
+    text-align: center;
+    clear:both;
+    width:100%;
+    background-color:black;
+    color:white;
+    position:relative;
+    top:30px;
+    line-height:60px;
+    font-weight:bold;
+}
+
+.nyuuryoku{
+    width:500px;
+    background-color:whitesmoke;
+    border-left:4px solid red;
+    line-height:1;
+    padding-top:5px;
+    padding-left:20px;
+    padding-bottom:5px;
+    margin-left:20px;
+}
+.keijiban{
+    padding-left:20px;
+    border-left:5px solid black;
+    border-bottom:1px solid black;
+}
+
+.rightcontainer ul{
+    list-style-type:none;
+    font-size:17px;
+}
+.rightcontainer ul li{
+    line-height:2;
+}
+.list h1{
+    font-size:25px;
+}
