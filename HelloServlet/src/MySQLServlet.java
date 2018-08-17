@@ -14,9 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class MySQLServlet
- */
+
 @WebServlet("/MySQLServlet")
 public class MySQLServlet extends HttpServlet {
 
@@ -26,9 +24,7 @@ public class MySQLServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
@@ -48,7 +44,7 @@ public class MySQLServlet extends HttpServlet {
 		String password = "mysql";
 
 		try{
-			Class.forName("conn.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			conn = DriverManager.getConnection(url,user,password);
 
 			Statement stmt = conn.createStatement();
