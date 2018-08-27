@@ -11,7 +11,7 @@ public class LoginAction extends ActionSupport {
 		String ret = ERROR;
 		LoginDAO dao = new LoginDAO();
 		boolean b = dao.select(username, password);
-		if (b = true) {
+		if (b == true) {
 			ret = SUCCESS;
 		} else {
 			ret = ERROR;
@@ -23,7 +23,7 @@ public class LoginAction extends ActionSupport {
 		return username;
 	}
 
-	public void serUsername(String username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
