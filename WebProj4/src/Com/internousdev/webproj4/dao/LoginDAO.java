@@ -7,30 +7,37 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.webproj4.dto.HelloStrutsDTO;
+import com.internousdev.webproj4.dto.LoginDTO;
 import com.internousdev.webproj4.util.DBConnector;
 
-public class HelloStrutsDAO {
-	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
+public class LoginDAO {
+	public String username;
+	public String password;
 
-	public List<HelloStrutsDTO> select() {
+	public List<LoginDTO> loginDTOList = new ArrayList<LoginDTO>();
+
+	public List<LoginDTO> select(String username, String password) {
+
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
 
-		String sql = "select * from users";
-
+		String sql = "select * from users where user_name=? and password=?";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, username);
+			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
-				HelloStrutsDTO dto = new HelloStrutsDTO();
-				dto.setUserId(rs.getInt("user_id"));
-				dto.setUserName(rs.getString("user_name"));
+				LoginDTO dto = new LoginDTO();
+				dto.setUsername(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
-				dto.setResult("MySQLÇ∆ê⁄ë±Ç≈Ç´Ç‹Ç∑");
-				helloStrutsDTOList.add(dto);
-
+				loginDTOList.add(dto);
+			}
+			if (loginDTOList.size() <= 0) {
+				LoginDTO dto = new LoginDTO();
+				dto.setUsername("äYìñÇ»Çµ");
+				loginDTOList.add(dto);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -40,6 +47,6 @@ public class HelloStrutsDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return helloStrutsDTOList;
+		return loginDTOList;
 	}
 }

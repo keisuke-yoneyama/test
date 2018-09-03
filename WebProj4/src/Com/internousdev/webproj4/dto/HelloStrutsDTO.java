@@ -1,4 +1,4 @@
-package Com.internousdev.webproj4.dto;
+package com.internousdev.webproj4.dto;
 
 public class HelloStrutsDTO {
 	private int userId;
