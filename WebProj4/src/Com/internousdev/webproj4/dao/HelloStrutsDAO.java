@@ -1,4 +1,4 @@
-package com.internousdev.webproj4.dao;
+package Com.internousdev.webproj4.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.webproj4.dto.HelloStrutsDTO;
-import com.internousdev.webproj4.util.DBConnector;
+import Com.internousdev.webproj4.dto.HelloStrutsDTO;
+import Com.internousdev.webproj4.util.DBConnector;
 
 public class HelloStrutsDAO {
 	List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
@@ -28,7 +28,7 @@ public class HelloStrutsDAO {
 				dto.setUserId(rs.getInt("user_id"));
 				dto.setUserName(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
-				dto.setResult("MySQL‚ÆÚ‘±‚Å‚«‚Ü‚·");
+				dto.setResult("MySQLï¿½ÆÚ‘ï¿½ï¿½Å‚ï¿½ï¿½Ü‚ï¿½");
 				helloStrutsDTOList.add(dto);
 
 			}

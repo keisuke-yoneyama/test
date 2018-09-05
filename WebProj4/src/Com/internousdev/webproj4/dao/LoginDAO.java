@@ -1,4 +1,4 @@
-package com.internousdev.webproj4.dao;
+package Com.internousdev.webproj4.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internousdev.webproj4.dto.LoginDTO;
-import com.internousdev.webproj4.util.DBConnector;
+import Com.internousdev.webproj4.dto.LoginDTO;
+import Com.internousdev.webproj4.util.DBConnector;
 
 public class LoginDAO {
 	public String username;
@@ -36,7 +36,7 @@ public class LoginDAO {
 			}
 			if (loginDTOList.size() <= 0) {
 				LoginDTO dto = new LoginDTO();
-				dto.setUsername("ŠY“–‚È‚µ");
+				dto.setUsername("ï¿½Yï¿½ï¿½ï¿½È‚ï¿½");
 				loginDTOList.add(dto);
 			}
 		} catch (SQLException e) {

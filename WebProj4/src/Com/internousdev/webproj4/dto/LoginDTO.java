@@ -1,4 +1,4 @@
-package com.internousdev.webproj4.dto;
+package Com.internousdev.webproj4.dto;
 
 public class LoginDTO {
 	private String username;
