@@ -11,6 +11,10 @@ import com.internousdev.webproj5.dto.HelloStrutsDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HelloStrutsAction extends ActionSupport implements SessionAware {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 	private List<HelloStrutsDTO> helloStrutsDTOList = new ArrayList<HelloStrutsDTO>();
 	private Map<String, Object> session;
 
