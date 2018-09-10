@@ -6,6 +6,10 @@ import com.internousdev.login.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -1973814321776568673L;
 	private String name;
 	private String password;
 
