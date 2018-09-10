@@ -14,10 +14,12 @@
 			<tr>
 				<th>名前</th>
 				<th>お問い合わせの種類</th>
+				<!-- thは強調 -->
 				<th>お問い合わせ内容</th>
 			</tr>
 
 			<s:iterator value="#session.inquiryDTOList">
+				<!-- マップの要素を iteratorで繰り返し処理 -->
 				<tr>
 					<td><s:property value="name" /></td>
 					<s:if test='qtype=="company"'>
