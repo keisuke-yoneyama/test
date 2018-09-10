@@ -31,7 +31,7 @@ public class TestAction extends ActionSupport implements SessionAware {
 		TestDAO dao = new TestDAO();
 		int count = dao.insert(username, password);
 
-		if (count > 0) {
+		if (count > 0) {//executeUpdateの戻り値
 			ret = SUCCESS;
 		} else {
 			ret = ERROR;

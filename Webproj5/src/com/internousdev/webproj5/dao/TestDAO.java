@@ -27,7 +27,7 @@ public class TestDAO {
 			ps.setString(2, password);
 			int i = ps.executeUpdate();
 			if (i > 0) {
-				System.out.println(i + "Œ“o˜^‚³‚ê‚Ü‚µ‚½B");
+				System.out.println(i + "ç™»éŒ²ã•ã‚Œã¾ã—ãŸ");
 				ret = i;
 			}
 		} catch (SQLException e) {
@@ -60,8 +60,8 @@ public class TestDAO {
 			}
 			if (loginDTOList.size() <= 0) {
 				LoginDTO dto = new LoginDTO();
-				dto.setUsername("ŠY“–‚È‚µ");
-				dto.setPassword("ŠY“–‚È‚µ");
+				dto.setUsername("è©²å½“ãªã—");
+				dto.setPassword("è©²å½“ãªã—");
 				loginDTOList.add(dto);
 			}
 		} catch (SQLException e) {

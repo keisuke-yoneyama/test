@@ -29,7 +29,7 @@ public class LoginAction extends ActionSupport implements SessionAware {
 		loginDTOList = dao.select(username, password);
 		if (this.username.equals(loginDTOList.get(0).getUsername())
 				&& this.password.equals(loginDTOList.get(0).getPassword())) {
-			session.put("loginDTOList", loginDTOList);
+			session.put("loginDTOList", loginDTOList);// キーと値をこのマップで関連付け
 			ret = SUCCESS;
 		} else {
 			session.put("loginDTOList", loginDTOList);
