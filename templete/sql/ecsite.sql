@@ -1,6 +1,6 @@
-set names utf-8;
+set names utf8;
 set foreign_key_checks = 0;
-drop databases if not exists ecsite;
+drop database if exists ecsite;
 
 create database if not exists ecsite;
 use ecsite;
@@ -13,7 +13,7 @@ login_id varchar(16)unique,
 login_pass varchar(16),
 user_name varchar(50),
 insert_date datetime,
-update_date datetime
+updated_date datetime
 );
 
 drop table if exists item_info_transaction;
@@ -41,7 +41,7 @@ delete_date datetime
 );
 
 INSERT INTO item_info_transaction
-(item_name,item_price,item_stock)VALUES("ÉmÅ[ÉgBook",100,50);
+(item_name,item_price,item_stock)VALUES("„Éé„Éº„ÉàBook",100,50);
 
 INSERT INTO login_user_transaction(login_id,login_pass,user_name)VALUES("internous",
 "internous01","test");

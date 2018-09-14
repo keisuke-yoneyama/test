@@ -6,14 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="ContentScript-Type" content="text/javascript" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name=description content="" />
+<meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Login画面</title>
+
+<title>UserCreateComplete画面</title>
 
 <style type="text/css">
-/*======== TAGLAYOUT =========*/
 body {
 	margin: 0;
 	padding: 0;
@@ -29,7 +29,7 @@ table {
 	text-align: center;
 	margin: 0 auto;
 }
-/*======== ID LAYOUT =========*/
+
 #top {
 	width: 780px;
 	margin: 30px auto;
@@ -55,7 +55,6 @@ table {
 	clear: both;
 }
 </style>
-
 </head>
 <body>
 	<div id="header">
@@ -63,26 +62,19 @@ table {
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Login</p>
+			<p>UserCreateComplete</p>
 		</div>
 		<div>
-			<h3>商品を購入する際にはログインをお願いします。</h3>
-			<s:form action="LoginAction">
-				<s:textfield name="loginUserId" />
-				<s:password name="loginPassword" />
-				<s:submit value="ログイン" />
-			</s:form>
-			<br />
+			<h3>ユーザー登録が完了しました.</h3>
 			<div>
-				<span>新規ユーザ登録は <a href='<s:url action="UserCreateAction"/>'>こちら</a>
-				</span>
+				<a href='<s:url action="HomeAction"/>'>ログインへ</a>
 			</div>
-
 		</div>
 	</div>
-
 	<div id="footer">
 		<div id="pr"></div>
 	</div>
+
+
 </body>
 </html>

@@ -4,16 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="ContentScript-Type" content="text/javascript" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name=description content="" />
+<meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Login画面</title>
 
+<title>UserCreateConfirm画面</title>
 <style type="text/css">
-/*======== TAGLAYOUT =========*/
+/*============= TAG LAYOUT=========================== */
 body {
 	margin: 0;
 	padding: 0;
@@ -29,7 +29,7 @@ table {
 	text-align: center;
 	margin: 0 auto;
 }
-/*======== ID LAYOUT =========*/
+/*================= ID LAYOUT============================= */
 #top {
 	width: 780px;
 	margin: 30px auto;
@@ -55,7 +55,6 @@ table {
 	clear: both;
 }
 </style>
-
 </head>
 <body>
 	<div id="header">
@@ -63,24 +62,31 @@ table {
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Login</p>
+			<p>UserCreateConfirm</p>
 		</div>
 		<div>
-			<h3>商品を購入する際にはログインをお願いします。</h3>
-			<s:form action="LoginAction">
-				<s:textfield name="loginUserId" />
-				<s:password name="loginPassword" />
-				<s:submit value="ログイン" />
-			</s:form>
-			<br />
-			<div>
-				<span>新規ユーザ登録は <a href='<s:url action="UserCreateAction"/>'>こちら</a>
-				</span>
-			</div>
-
+			<h3>登録する内容は以下でよろしいでしょうか。</h3>
+			<table>
+				<s:form action="UserCreateCompleteAction">
+					<tr id="box">
+						<td><label>ログインID:</label></td>
+						<td><s:property value="loginUserId" escape="false" /></td>
+					</tr>
+					<tr id="box">
+						<td><label>ログインPASS:</label></td>
+						<td><s:property value="loginPassword" escape="false" /></td>
+					</tr>
+					<tr id="box">
+						<td><label>ユーザ-名:</label></td>
+						<td><s:property value="userName" escape="false" /></td>
+					</tr>
+					<tr>
+						<td><s:submit value="完了" /></td>
+					</tr>
+				</s:form>
+			</table>
 		</div>
 	</div>
-
 	<div id="footer">
 		<div id="pr"></div>
 	</div>
