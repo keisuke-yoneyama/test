@@ -9,6 +9,10 @@ import com.internousdev.templete.dao.UserCreateCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateCompleteAction extends ActionSupport implements SessionAware {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -200797936175861607L;
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;

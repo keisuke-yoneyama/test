@@ -11,6 +11,10 @@ import com.internousdev.templete.dto.LoginDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginAction extends ActionSupport implements SessionAware {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -3675170844170404864L;
 	private String loginUserId;
 	private String loginPassword;
 	private String result;

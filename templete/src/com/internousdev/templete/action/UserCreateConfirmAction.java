@@ -7,6 +7,10 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -3209867462625751330L;
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
@@ -21,7 +25,7 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 			session.put("loginPassword", loginPassword);
 			session.put("userName", userName);
 		} else {
-			setErrorMessage("未入力の項目があります.");
+			setErrorMessage("譛ｪ蜈･蜉帙�ｮ鬆�逶ｮ縺後≠繧翫∪縺�.");
 			result = ERROR;
 		}
 		return result;

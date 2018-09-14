@@ -41,7 +41,7 @@ delete_date datetime
 );
 
 INSERT INTO item_info_transaction
-(item_name,item_price,item_stock)VALUES("„Éé„Éº„ÉàBook",100,50);
+(item_name,item_price,item_stock)VALUES("ÉmÅ[ÉgBook",100,50);
 
 INSERT INTO login_user_transaction(login_id,login_pass,user_name)VALUES("internous",
 "internous01","test");
