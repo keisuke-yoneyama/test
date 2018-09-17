@@ -4,16 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="ContentScript-Type" content="text/javascript" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="description" content="" />
 <meta http-equiv="imagetoolbar" content="no" />
-<meta name=description content="" />
 <meta name="keywords" content="" />
-<title>Login画面</title>
 
+<title>buyItemComplete</title>
 <style type="text/css">
-/*======== TAGLAYOUT =========*/
+/*=============== TAGLAYOUT ================= */
 body {
 	margin: 0;
 	padding: 0;
@@ -27,9 +27,9 @@ body {
 
 table {
 	text-align: center;
-	margin: 0 auto;
+	margin: 0px;
 }
-/*======== ID LAYOUT =========*/
+/*================== ID LAYOUT=========================*/
 #top {
 	width: 780px;
 	margin: 30px auto;
@@ -55,7 +55,6 @@ table {
 	clear: both;
 }
 </style>
-
 </head>
 <body>
 	<div id="header">
@@ -63,24 +62,15 @@ table {
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Login</p>
+			<p>BuyItemComplete</p>
 		</div>
 		<div>
-			<h3>商品を購入する際にはログインをお願いします。</h3>
-			<s:form action="LoginAction">
-				<s:textfield name="loginUserId" label="ユーザID"/>
-				<s:password name="loginPassword" label="パスワード"/>
-				<s:submit value="ログイン" />
-			</s:form>
-			<br />
+			<p>購入が完了しました。</p>
 			<div>
-				<span>新規ユーザ登録は <a href='<s:url action="UserCreateAction"/>'>こちら</a>
-				</span>
+				<a href='<s:url action="MyPageAction"/>'> マイページ</a><span>から購入履歴の確認が可能です。</span>
 			</div>
-
 		</div>
 	</div>
-
 	<div id="footer">
 		<div id="pr"></div>
 	</div>

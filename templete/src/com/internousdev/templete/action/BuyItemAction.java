@@ -1,7 +1,9 @@
 package com.internousdev.templete.action;
 
 import java.util.Map;
+
 import org.apache.struts2.interceptor.SessionAware;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BuyItemAction extends ActionSupport implements SessionAware {
@@ -25,10 +27,10 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		String payment;
 
 		if (pay.equals("1")) {
-			payment = "Œ»‹à•¥‚¢";
+			payment = "ç¾é‡‘æ‰•ã„";
 			session.put("pay", payment);
 		} else {
-			payment = "ƒNƒŒƒWƒbƒgƒJ[ƒh";
+			payment = "ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰";
 			session.put("pay", payment);
 		}
 		return result;
