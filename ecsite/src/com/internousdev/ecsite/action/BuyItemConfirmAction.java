@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.ecsite.dao.BuyItemCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BuyItemConfirmAction extends ActionSupport implements SessionAware {
@@ -12,6 +13,13 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
 
 	public String execute() throws SQLException {
+		System.out.println("-------------");
+		System.out.println(session.get("id").toString());
+		System.out.println(session.get("login_user_id").toString());
+		System.out.println(session.get("total_price").toString());
+		System.out.println(session.get("count").toString());
+		System.out.println(session.get("pay").toString());
+		System.out.println("-------------");
 		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("login_user_id").toString(),
 				session.get("total_price").toString(), session.get("count").toString(), session.get("pay").toString());
 		String result = SUCCESS;

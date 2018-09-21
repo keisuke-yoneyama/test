@@ -49,7 +49,7 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 	}
 
 	@Override
-	public void setSession(Map<String, Object> session) {
+	public void setSession(Map<String, Object> session){
 		this.session = session;
 	}
 }

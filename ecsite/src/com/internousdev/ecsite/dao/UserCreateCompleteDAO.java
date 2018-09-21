@@ -3,6 +3,7 @@ package com.internousdev.ecsite.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 import com.internousdev.ecsite.util.DBConnector;
 import com.internousdev.ecsite.util.DateUtil;
 
@@ -17,7 +18,7 @@ public class UserCreateCompleteDAO {
 
 	public void createUser(String loginUserId,String loginUserPassword,String userName)throws
 	SQLException{
-		tyr{
+		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, loginUserId);
 			preparedStatement.setString(2, loginUserPassword);
