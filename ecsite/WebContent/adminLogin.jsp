@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,9 +11,7 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-
-<title>Home画面</title>
-
+<title>管理者ログイン</title>
 <style type="text/css">
 body {
 	margin: 0;
@@ -68,24 +67,23 @@ table {
 	</div>
 	<div id="main">
 		<div id="top">
-			<p>Home</p>
+			<p>管理者ログイン画面</p>
 		</div>
-		<div id="text-center">
-			<s:form action="HomeAction">
-				<s:submit value="商品購入" />
+		<div>
+			<h3>管理者ページに移行するにはログインをお願いします。</h3>
+			<s:form action="AdminLoginAction">
+				<s:textfield name="adminLoginUserId" />
+				<s:password name="adminLoginPassword" />
+				<s:submit value="管理者としてログイン" />
 			</s:form>
-
-			<s:form action="AdminAction">
-				<s:submit value="管理者ページ" />
-			</s:form>
-
-			<s:if test="#session.id != null">
+			<br>
+			<div id="text-link">
 				<p>
-					ログアウトする場合は <a href='<s:url action="LogoutAction"/>'>こちら</a>
-				</p>
-			</s:if>
+					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+			</div>
 		</div>
 	</div>
+
 	<div id="footer">
 		<div id="pr"></div>
 	</div>

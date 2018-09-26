@@ -1,4 +1,5 @@
 package com.internousdev.ecsite.action;
+
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -6,7 +7,6 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.ecsite.dao.BuyItemDAO;
 import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
-
 
 public class HomeAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> session;
@@ -18,7 +18,7 @@ public class HomeAction extends ActionSupport implements SessionAware {
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
 			session.put("id", buyItemDTO.getId());
 			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem__price", buyItemDTO.getItemPrice());
+			session.put("buyItem__price", buyItemDTO.getItemPrice());// 前にログイン済みで購入した結果があったらサクセス。
 			result = SUCCESS;
 		}
 		return result;

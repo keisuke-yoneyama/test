@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="imagetoolbar" content="no" />
@@ -55,12 +55,15 @@ table {
 }
 
 #text-right {
-	display: inline-black;
+	display: inline-block;
 	text-align: right;
 }
 </style>
 </head>
 <body>
+	<div id="header">
+		<div id="pr"></div>
+	</div>
 	<div id="main">
 		<div id="top">
 			<p>MyPage</p>
@@ -82,8 +85,8 @@ table {
 					<s:iterator value="myPageList">
 						<tr>
 							<td><s:property value="itemName" /></td>
-							<td><s:property value="totalPrice" /></td>
-							<td><s:property value="totalCount" /></td>
+							<td><s:property value="totalPrice" /><span>円</span></td>
+							<td><s:property value="totalCount" /><span>個</span></td>
 							<td><s:property value="payment" /></td>
 							<td><s:property value="insert_date" /></td>
 						</tr>
