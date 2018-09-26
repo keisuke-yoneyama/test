@@ -1,11 +1,11 @@
 package com.internousdev.ecsite.dto;
 
 public class BuyItemDTO {
-	public int id;
+	private int id;
 
-	public String itemName;
+	private String itemName;
 
-	public String itemPrice;
+	private String itemPrice;
 
 	public String getItemName() {
 		return itemName;
@@ -20,7 +20,7 @@ public class BuyItemDTO {
 	}
 
 	public void setItemPrice(String itemPrice) {
-		this.itemName = itemPrice;
+		this.itemPrice = itemPrice;
 	}
 
 	public int getId() {

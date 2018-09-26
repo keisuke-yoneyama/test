@@ -14,7 +14,7 @@
 <title>Home画面</title>
 
 <style type="text/css">
-body ={
+body {
 	margin: 0;
 	padding: 0;
 	line-height: 1.6;
@@ -31,6 +31,12 @@ table {
 }
 
 /*================ ECsite LAYOUT==========================*/
+#top {
+	width: 780px;
+	margin: 30px auto;
+	border: 1px solid #333;
+}
+
 #header {
 	width: 100%;
 	height: 80px;
