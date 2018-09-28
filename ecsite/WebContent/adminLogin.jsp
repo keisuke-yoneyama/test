@@ -72,8 +72,8 @@ table {
 		<div>
 			<h3>管理者ページに移行するにはログインをお願いします。</h3>
 			<s:form action="AdminLoginAction">
-				<s:textfield name="adminLoginUserId" />
-				<s:password name="adminLoginPassword" />
+				<s:textfield name="loginUserId" />
+				<s:password name="loginPassword" />
 				<s:submit value="管理者としてログイン" />
 			</s:form>
 			<br>

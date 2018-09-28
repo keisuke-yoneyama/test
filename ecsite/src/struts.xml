@@ -106,6 +106,7 @@
 		<action name="AdminLoginAction" class="com.internousdev.ecsite.action.AdminLoginAction"
 			method="execute">
 			<result name="success">adminMyPage.jsp</result>
+			<result name="admin">adminMyPage.jsp</result>
 			<result name="error">home.jsp</result>
 		</action>
 	</package>

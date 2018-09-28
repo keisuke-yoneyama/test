@@ -3,34 +3,34 @@ package com.internousdev.ecsite.dto;
 public class AdminLoginDTO {
 	private boolean loginFlg = false;
 
-	private String login_id;
+	private String admin_id;
 
-	private String login_pass;
+	private String admin_pass;
 
-	private String user_name;
+	private String admin_name;
 
 	public String getAdminLoginId() {
-		return login_id;
+		return admin_id;
 	}
 
-	public void setAdminLoginId(String login_id) {
-		this.login_id = login_id;
+	public void setAdminLoginId(String admin_id) {
+		this.admin_id = admin_id;
 	}
 
 	public String getAdminLoginPassword() {
-		return login_pass;
+		return admin_pass;
 	}
 
-	public void setAdminLoginPassword(String login_pass) {
-		this.login_pass = login_pass;
+	public void setAdminLoginPassword(String admin_pass) {
+		this.admin_pass = admin_pass;
 	}
 
 	public String getAdminUserName() {
-		return user_name;
+		return admin_name;
 	}
 
-	public void setAdminUserName(String user_name) {
-		this.user_name = user_name;
+	public void setAdminUserName(String admin_name) {
+		this.admin_name = admin_name;
 	}
 
 	public boolean getLoginFlg() {

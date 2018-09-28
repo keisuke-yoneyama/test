@@ -19,9 +19,10 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
 
+
 	public String execute() {
 		String result = ERROR;
-		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
+		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword );
 		session.put("loginUser", loginDTO);
 
 		if (((LoginDTO) session.get("loginUser")).getLoginFlg()){
@@ -57,6 +58,8 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	public void setLoginPassword(String loginPassword) {
 		this.loginPassword = loginPassword;
 	}
+
+
 
 	@Override
 	public void setSession(Map<String, Object> session) {

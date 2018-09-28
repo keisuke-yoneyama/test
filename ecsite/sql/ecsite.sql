@@ -12,6 +12,7 @@ create table login_user_transaction(
 	login_id varchar(16) unique,
 	login_pass varchar(16),
 	user_name varchar(50),
+	is_admin varchar(1),
 	insert_date datetime,
 	updated_date datetime
 );
@@ -29,15 +30,6 @@ create table item_info_transaction(
 
 drop table if exists user_buy_item_transaction;
 
-create table admin_user_transaction(
-	id int not null primary key auto_increment,
-	login_id varchar(16) unique,
-	login_pass varchar(16),
-	user_name varchar(50),
-	insert_date datetime,
-	updated_date datetime
-);
-
 
 create table user_buy_item_transaction(
 	id int not null primary key auto_increment,
@@ -52,6 +44,5 @@ create table user_buy_item_transaction(
 
 INSERT INTO item_info_transaction(item_name,item_price,item_stock)VALUES("ノートBook",100,50);
 
-INSERT INTO admin_user_transaction(login_id,login_pass,user_name)VALUES("admin","keisuke","keisukeYoneyama");
-
-INSERT INTO login_user_transaction(login_id,login_pass,user_name)VALUES("internous","internous01","test");
+INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin)VALUES("internous","internous01","test", "0");
+INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin)VALUES("admin","admin","test", "1");

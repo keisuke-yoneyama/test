@@ -14,22 +14,24 @@ public class LoginDAO {
 	private LoginDTO loginDTO = new LoginDTO();
 
 	public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
-		String sql = "SELECT * FROM login_user_transaction where login_id = ? AND login_pass = ?";
+		String sql = "SELECT * FROM login_user_transaction where login_id = ? AND login_pass = ? ";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1, loginUserId);
 			preparedStatement.setString(2, loginPassword);
 
+
 			ResultSet resultSet = preparedStatement.executeQuery();
 
-			if (resultSet.next()) {
+			if (resultSet.next()) {//loginDTOの各カプセルに情報を入れていく
 				loginDTO.setLoginId(resultSet.getString("login_id"));
 				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name"));
+				loginDTO.setIsAdmin(resultSet.getString("is_admin"));
 
 				if (!(resultSet.getString("login_id").equals(null))) {
-					loginDTO.setLoginFlg(true);
+					loginDTO.setLoginFlg(true);// ログインしている状態（フラグをトゥルーにする）にする。
 				}
 			}
 		} catch (Exception e) {

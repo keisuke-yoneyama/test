@@ -9,6 +9,16 @@ public class LoginDTO {
 
 	private String user_name;
 
+	private String is_admin;//adminの情報を入れる変数
+
+	public String getIsAdmin(){//adminのげッター
+		return is_admin;
+	}
+
+	public void setIsAdmin(String is_admin){//adminのセッター
+		this.is_admin = is_admin;
+	}
+
 	public String getLoginId() {
 		return login_id;
 	}
