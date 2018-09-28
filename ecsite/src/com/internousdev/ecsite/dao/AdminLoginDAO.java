@@ -12,9 +12,9 @@ public class AdminLoginDAO {
 	private Connection connection = dbConnector.getConnection();
 	private AdminLoginDTO adminLoginDTO = new AdminLoginDTO();
 
-	public AdminLoginDTO getAdminLoginUserInfo(String adminLoginUserId,String adminLoginPassword){
+	public AdminLoginDTO getAdminLoginUserInfo(String adminLoginUserId, String adminLoginPassword) {
 		String sql = "SELECT * FROM admin_user_transaction where login_id = ? AND login_pass = ?";
-		try{
+		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1, adminLoginUserId);
@@ -22,9 +22,22 @@ public class AdminLoginDAO {
 
 			ResultSet resultSet = preparedStatement.executeQuery();
 
-			if(resultSet.next()){
-				adminLoginDTO.set//ここから始める。AdminLoginDTOでセッターゲッターを定義するところから
+			if (resultSet.next()) {
+				adminLoginDTO.setAdminLoginId(resultSet.getString("login_id"));
+				adminLoginDTO.setAdminLoginPassword(resultSet.getString("login_pass"));
+				adminLoginDTO.setAdminUserName(resultSet.getString("user_name"));
+
+				if (!(resultSet.getString("login_id").equals(null))) {
+					adminLoginDTO.setLoginFlg(true);
+				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		return adminLoginDTO;
+	}
+
+	public AdminLoginDTO getAdminLoginDTO() {
+		return adminLoginDTO;
 	}
 }

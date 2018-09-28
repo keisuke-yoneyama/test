@@ -100,6 +100,13 @@
 			method="execute">
 			<result name="login">adminLogin.jsp</result>
 			<!-- ここに後で、管理者ログイン済みの場合の遷移ｊｓｐを指定 -->
+
+		</action>
+		<!-- AdminLoginAction -->
+		<action name="AdminLoginAction" class="com.internousdev.ecsite.action.AdminLoginAction"
+			method="execute">
+			<result name="success">adminMyPage.jsp</result>
+			<result name="error">home.jsp</result>
 		</action>
 	</package>
 </struts>
