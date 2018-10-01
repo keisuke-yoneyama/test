@@ -1,0 +1,257 @@
+@CHARSET "UTF-8";
+
+/* common */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
+
+header {
+	width: 100%;
+	height: 40px;
+	background: black;
+	color: white;
+}
+
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	background: white;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 20px 0;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+h2 {
+	margin: 15px 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+th {
+	text-align: right;
+	padding-right: 5px;
+}
+
+select {
+	margin: 0 0 0 10px;
+}
+
+.button {
+	width: 120px;
+	height: 30px;
+	font-size: 15px;
+	border: 1px solid white;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background: #999;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+
+/* id */
+#container {
+	width: 100%;
+	min-width: 1200px;
+	min-height: 100%;
+	position: relative;
+}
+
+#header ul {
+	line-height: 40px;
+}
+
+#header li {
+	display: inline-block;
+}
+
+#main {
+	width: 1200px;
+	padding: 10px 10px 30px;
+	margin: 0 auto;
+	color: black;
+}
+
+#footer {
+	width: 100%;
+	height: 20px;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	position: absolute;
+	bottom: 0;
+}
+
+#text { /*検索で使用*/
+	width: 150px;
+	margin: 0 5px;
+}
+
+#itemList { /*itemListで使用*/
+
+}
+
+#nameIntroduction { /* headerで使用 */
+	width: 150px;
+	float: left;
+	line-height: 40px;
+	margin-left: 10px;
+}
+
+#pageNo li {
+	display: inline-block;
+}
+
+/* class */
+.all {
+	width: 100%;
+	height: 100%;
+}
+
+.topPage {
+	background-image: url("../images/top.jpg");
+	background-size: auto 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.verticalTable {
+	margin-left: 10px;
+}
+
+.verticalTable tr {
+	height: 30px;
+}
+
+.verticalTable th {
+	background: black;
+	color: white;
+	font-size: 16px;
+	width: 170px;
+}
+
+.txt {
+	width: 300px;
+	height: 30px;
+	border: 0.5px solid #999;
+	font-size: 24px;
+}
+
+.list {
+	width: 300px;
+	height: 30px;
+	border: 0.5px solid #999;
+}
+
+.marginTop {
+	margin-top: 15px;
+}
+
+.marginBottom {
+	margin-bottom: 15px;
+}
+
+.center {
+	text-align: center;
+}
+
+.float {
+	float: left;
+}
+
+.ShowData th {
+	padding: 3px;
+}
+
+.marginLeft {
+	margin-left: 20px;
+}
+
+.itemListBox {
+	display: inline-block;
+	margin: 15px;
+	text-align: center;
+}
+
+.itemImage {
+	width: 200px;
+	height: 200px;
+}
+
+.itemDetailBox {
+	text-align: center;
+	font-size: 22px;
+}
+
+.itemDetailBox table {
+	margin: 20px auto;
+}
+
+.itemDetailImage {
+	width: 500px;
+	height: 500px;
+}
+
+.itemImageSmall {
+	width: 50px;
+	height: 50px;
+}
+
+.error {
+	color: red;
+	font-size: 20px;
+}
+
+.marginAuto {
+	margin: 0 auto;
+}
+
+.page {
+	width: 25px;
+	height: 25px;
+	padding: 1px;
+	font-size: 20px;
+	background-color: green;
+	color: white;
+	border-radius: 50%;
+}
+
+.page:hover {
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.pageAct {
+	width: 25px;
+	height: 25px;
+	padding: 1px;
+	font-size: 20px;
+	background-color: #00FF99;
+	color: black;
+	border-radius: 50%;
+}

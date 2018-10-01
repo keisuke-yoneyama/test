@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+
+<struts>
+<constant name="struts.ui.theme" value="simple" />
+<constant name="struts.devMode" value="true" />
+<!-- 対象のpackageを設定 -->
+<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+	<!-- GoHomeAction -->
+	<action name="GoHomeAction" class="com.internousdev.webtraining.action.GoHomeAction" method="execute">
+	<result name="success">home.jsp</result>
+	</action>
+
+	<!-- GoLoginAction -->
+	<action name="GoLoginAction" class="com.internousdev.webtraining.action.GoLoginAction" method="execute">
+	<result name="success">login.jsp</result>
+	</action>
+
+	<!-- LoginAction -->
+	<action name="LoginAction" class="com.internousdev.webtraining.action.LoginAction" method="execute">
+	<result name="success">home.jsp</result>
+	<result name="error">login.jsp</result>
+	<result name="administrator">administrator.jsp</result>
+	<result name="settlement" type="redirectAction">GoCartAction</result>
+	</action>
+	<!-- typeのredirectAction...フォームの入力値がActionにセットされない -->
+
+	<!-- LogoutAction -->
+	<action name="LogoutAction" class="com.internousdev.webtraining.action.LogoutAction" method="execute">
+	<result name="success">home.jsp</result>
+	</action>
+
+	<!-- CreateUserAction -->
+	<action name="CreateUserAction" class="com.internousdev.webtraining.action.CreateUserAction" method="execute">
+	<result name="success">createUser.jsp</result>
+	</action>
+
+	<!-- CreateUserConfirmAction -->
+	<action name="CreateUserConfirmAction" class="com.internousdev.webtraining.action.CreateUserConfirmAction" method="execute">
+	<result name="success">createUserConfirm.jsp</result>
+	<result name="error">createUser.jsp</result>
+	</action>
+
+	<!-- CreateUserCompleteAction -->
+	<action name="CreateUserCompleteAction" class="com.internousdev.webtraining.action.CreateUserCompleteAction" method="execute">
+	<result name="success">createUserComplete.jsp</result>
+	</action>
+
+	<!-- ResetPasswordAction -->
+	<action name="ResetPasswordAction" class="com.internousdev.webtraining.action.ResetPasswordAction" method="execute">
+	<result name="success">resetPassword.jsp</result>
+	</action>
+
+	<!-- ResetPasswordConfirmAction -->
+	<action name="ResetPasswordConfirmAction" class="com.internousdev.webtraining.action.ResetPasswordConfirmAction" method="execute">
+	<result name="success">resetPasswordConfirm.jsp</result>
+	<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<!-- ResetPasswordCompleteAction -->
+	<action name="ResetPasswordCompleteAction" class="com.internousdev.webtraining.action.ResetPasswordCompleteAction" method="execute">
+	<result name="success">resetPasswordComplete.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- ItemInfoAction -->
+	<action name="ItemInfoAction" class="com.internousdev.webtraining.action.ItemInfoAction" method="execute">
+	<result name="success">itemInfo.jsp</result>
+	<result name="error">administrator.jsp</result>
+	</action>
+
+	<!-- ItemCreateAction -->
+	<action name="ItemCreateAction" class="com.internousdev.webtraining.action.ItemCreateAction" method="execute">
+	<result name="success">itemCreate.jsp</result>
+	</action>
+
+	<!-- GoAdministratorAction -->
+	<action name="GoAdministratorAction" class="com.internousdev.webtraining.action.GoAdministratorAction" method="execute">
+	<result name="success">administrator.jsp</result>
+	<result name="error">home.jsp</result>
+	</action>
+
+	<!-- ItemCreateConfirmAction -->
+	<action name="ItemCreateConfirmAction" class="com.internousdev.webtraining.action.ItemCreateConfirmAction" method="execute">
+
+	<interceptor-ref name="fileUpload">
+		<param name="maximumSize">2097152</param>
+		<param name="allowedTypes">image/png,image/gif,image/jpeg,image/pjpeg</param>
+	</interceptor-ref>
+	<interceptor-ref name="defaultStack"></interceptor-ref>
+
+	<result name="success">itemCreateConfirm.jsp</result>
+	<result name="error">itemCreate.jsp</result>
+	</action>
+
+	<!-- ItemCreateCompleteAction -->
+	<action name="ItemCreateCompleteAction" class="com.internousdev.webtraining.action.ItemCreateCompleteAction" method="execute">
+	<result name="success">itemCreateComplete.jsp</result>
+	<result name="error">itemCreateError.jsp</result>
+	</action>
+
+	<!-- ItemInfoChangeAction -->
+	<action name="ItemInfoChangeAction" class="com.internousdev.webtraining.action.ItemInfoChangeAction" method="execute">
+	<result name="success">itemInfoChange.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	<result name="admin" type="redirectAction">ItemInfoAction</result>
+	</action>
+
+	<!-- ItemInfoModificationAction -->
+	<action name="ItemInfoModificationAction" class="com.internousdev.webtraining.action.ItemInfoModificationAction" method="execute">
+	<result name="success">itemInfoModification.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- ItemInfoModificationConfirmAction -->
+	<action name="ItemInfoModificationConfirmAction" class="com.internousdev.webtraining.action.ItemInfoModificationConfirmAction" method="execute">
+	<result name="success">itemInfoModificationConfirm.jsp</result>
+	<result name="error">itemInfoModification.jsp</result>
+	</action>
+
+	<!-- ItemInfoModificationCompleteAction -->
+	<action name="ItemInfoModificationCompleteAction" class="com.internousdev.webtraining.action.ItemInfoModificationCompleteAction" method="execute">
+	<result name="success">itemInfoModificationComplete.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- UserInfoAction -->
+	<action name="UserInfoAction" class="com.internousdev.webtraining.action.UserInfoAction" method="execute">
+	<result name="success">userInfo.jsp</result>
+	<result name="error">administrator.jsp</result>
+	</action>
+
+	<!-- UserInfoChangeAction -->
+	<action name="UserInfoChangeAction" class="com.internousdev.webtraining.action.UserInfoChangeAction" method="execute">
+	<result name="success">userInfoChange.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- UserInfoModificationAction -->
+	<action name="UserInfoModificationAction" class="com.internousdev.webtraining.action.UserInfoModificationAction" method="execute">
+	<result name="success">userInfoModification.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- UserInfoModificationConfirmAction -->
+	<action name="UserInfoModificationConfirmAction" class="com.internousdev.webtraining.action.UserInfoModificationConfirmAction" method="execute">
+	<result name="success">userInfoModificationConfirm.jsp</result>
+	<result name="error">userInfoModification.jsp</result>
+	</action>
+
+	<!-- UserInfoModificationCompleteAction -->
+	<action name="UserInfoModificationCompleteAction" class="com.internousdev.webtraining.action.UserInfoModificationCompleteAction" method="execute">
+	<result name="success">userInfoModificationComplete.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- ItemListAction -->
+	<action name="ItemListAction" class="com.internousdev.webtraining.action.ItemListAction" method="execute">
+	<result name="success">itemList.jsp</result>
+	</action>
+
+	<!-- ItemDetailsAction -->
+	<action name="ItemDetailsAction" class="com.internousdev.webtraining.action.ItemDetailsAction" method="execute">
+	<result name="success">itemDetail.jsp</result>
+	<result name="error">error.jsp</result>
+	</action>
+
+	<!-- AddCartAction -->
+	<action name="AddCartAction" class="com.internousdev.webtraining.action.AddCartAction" method="execute">
+	<result name="success" type="redirectAction">GoCartAction</result>
+	</action>
+
+	<!-- GoCartAction -->
+	<action name="GoCartAction" class="com.internousdev.webtraining.action.GoCartAction" method="execute">
+	<result name="success">cartInfo.jsp</result>
+	<result name="error" type="redirectAction">GoHomeAction</result>
+	</action>
+
+	<!-- SettlementConfirmAction -->
+	<action name="SettlementConfirmAction" class="com.internousdev.webtraining.action.SettlementConfirmAction" method="execute">
+	<result name="success">destinationInfo.jsp</result>
+	<result name="error">login.jsp</result>
+	</action>
+
+	<!-- DestinationCreateAction -->
+	<action name="DestinationCreateAction" class="com.internousdev.webtraining.action.DestinationCreateAction" method="execute">
+	<result name="success">destinationCreate.jsp</result>
+	</action>
+
+	<!-- DestinationConfirmAction -->
+	<action name="DestinationConfirmAction" class="com.internousdev.webtraining.action.DestinationConfirmAction" method="execute">
+	<result name="success">destinationConfirm.jsp</result>
+	<result name="error">destinationCreate.jsp</result>
+	</action>
+
+	<!-- DestinationCompleteAction -->
+	<action name="DestinationCompleteAction" class="com.internousdev.webtraining.action.DestinationCompleteAction" method="execute">
+	<result name="success">destinationComplete.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- SettlementCompleteAction -->
+	<action name="SettlementCompleteAction" class="com.internousdev.webtraining.action.SettlementCompleteAction" method="execute">
+	<result name="success">settlementComplete.jsp</result>
+	<result name="error">error.jsp</result>
+	</action>
+
+	<!-- GoMyPageAction -->
+	<action name="GoMyPageAction" class="com.internousdev.webtraining.action.GoMyPageAction" method="execute">
+	<result name="success">myPage.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+	<!-- GoPurchaseHistoryInfoAction -->
+	<action name="GoPurchaseHistoryInfoAction" class="com.internousdev.webtraining.action.GoPurchaseHistoryInfoAction" method="execute">
+	<result name="success">purchaseHistoryInfo.jsp</result>
+	<result name="error">sessionOut.jsp</result>
+	</action>
+
+</package>
+</struts>

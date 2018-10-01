@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>header</title>
+<!-- 	<link rel="stylesheet"href="./css/style.css"> -->
+</head>
+<body>
+	<header>
+		<div id="nameIntroduction">
+			<a href='<s:url action="GoHomeAction"/>'><img
+				src="WebContent/images/logo.tif" alt="yonezonlogo"></a>
+		</div>
+
+		<ul>
+			<li><select name="category_id">
+					<option value="1">全てのカテゴリー</option>
+					<option value="2">本</option>
+					<option value="3">家電・パソコン</option>
+					<option value="4">ホビー・ゲーム</option>
+			</select></li>
+			<li><input type="hidden" name="retrievalFlg" value="1">
+				<input type="text" name="keywords" placeholder="キーワードを入力" id="text">
+			</li>
+
+			<s:if test='#session.containsKey("login_id")'>
+				<li>アカウントサービス</li>
+			</s:if>
+
+			<li><s:if test='#session.contentsKey("login_id")'>
+					<a href='<s:url action="LogoutAction"/>'><input type="button"
+						value="サインアウト" class="button"> </a>
+				</s:if> <s:else>
+					<a href='<s:url action="LoginAction"/>'><input type="button"
+						value="サインイン" class="button"> </a>
+				</s:else></li>
+
+
+			<li>注文履歴</li>
+
+			<li><a href='<s:url action="HomeAction"/>'><img
+					src="WebContent/images/cart.png" alt="cart"></a></li>
+
+		</ul>
+	</header>
+</body>
+</html>

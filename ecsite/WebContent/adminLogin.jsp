@@ -12,80 +12,32 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <title>管理者ログイン</title>
-<style type="text/css">
-body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	letter-spacing: 1px;
-	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #333;
-	background: #fff;
-}
-
-table {
-	text-align: center;
-	margin: 0 auto;
-}
-
-/*================ ECsite LAYOUT==========================*/
-#top {
-	width: 780px;
-	margin: 30px auto;
-	border: 1px solid #333;
-}
-
-#header {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-}
-
-#main {
-	width: 100%;
-	height: 500px;
-	text-align: center;
-}
-
-#footer {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-	clear: both;
-}
-
-#text-center {
-	display: inline-block;
-	text-align: center;
-}
-</style>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<div id="header">
-		<div id="pr"></div>
-	</div>
-	<div id="main">
-		<div id="top">
-			<p>管理者ログイン画面</p>
-		</div>
-		<div>
-			<h3>管理者ページに移行するにはログインをお願いします。</h3>
-			<s:form action="AdminLoginAction">
-				<s:textfield name="loginUserId" />
-				<s:password name="loginPassword" />
-				<s:submit value="管理者としてログイン" />
-			</s:form>
-			<br>
-			<div id="text-link">
-				<p>
-					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+	<div id="container">
+		<jsp:include page="header.jsp" />
+
+		<div id="main" class="clear">
+			<div id="top">
+				<p>管理者ログイン画面</p>
+			</div>
+			<div>
+				<h3>管理者ページに移行するにはログインをお願いします。</h3>
+				<s:form action="AdminLoginAction">
+					<s:textfield name="loginUserId" />
+					<s:password name="loginPassword" />
+					<s:submit value="管理者としてログイン" />
+				</s:form>
+				<br>
+				<div id="text-link">
+					<p>
+						Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div id="footer">
-		<div id="pr"></div>
+		<jsp:include page="footer.jsp" />
 	</div>
 </body>
 </html>
