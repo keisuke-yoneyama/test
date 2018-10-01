@@ -22,11 +22,12 @@
 				<p>管理者ページ</p>
 				<br>
 				<p>
-					こんにちは、
 					<s:property value="#session.loginUser" />
-					さん！！！<br>
+					さん！！！管理者ページへようこそ！ <br>
 				</p>
 			</div>
+			<a href='<s:url action="GoItemCreateAction" />'><input
+				type="button" value="商品追加" class="button"></a>
 			<div id="text-right">
 				<p>
 					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>
