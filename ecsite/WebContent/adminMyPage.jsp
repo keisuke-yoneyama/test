@@ -22,12 +22,24 @@
 				<p>管理者ページ</p>
 				<br>
 				<p>
-					<s:property value="#session.loginUser" />
+					<s:property value="#session.user_name" />
 					さん！！！管理者ページへようこそ！ <br>
 				</p>
 			</div>
+			<s:if test='#session.containsKey("address")'>
+				<h2>
+					お届け先:
+					<s:property value="#session.user_name" />
+					さん<br>
+					<s:property value="#session.address" />
+					にお届け
+				</h2>
+			</s:if>
+
 			<a href='<s:url action="GoItemCreateAction" />'><input
-				type="button" value="商品追加" class="button"></a>
+				type="button" value="商品追加" class="button"></a> <a
+				href='<s:url action="UserInfoAction" />'><input type="button"
+				value="ユーザー情報" class="button"></a>
 			<div id="text-right">
 				<p>
 					Homeへ戻る場合は<a href='<s:url action="GoHomeAction"/>'>こちら</a>

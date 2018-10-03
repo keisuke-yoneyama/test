@@ -7,18 +7,21 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateConfirmAction extends ActionSupport implements SessionAware {
-	private String loginUserId;
-	private String loginPassword;
-	private String userName;
+	private String login_id;
+	private String login_pass;
+	private String user_name;
 	public Map<String, Object> session;
 	private String errorMassage;
+	private String address;
 
 	public String execute() {
 		String result = SUCCESS;
-		if (!(loginUserId.equals("")) && !(loginPassword.equals("")) && !(userName.equals(""))) {
-			session.put("loginUserId", loginUserId);
-			session.put("loginPassword", loginPassword);
-			session.put("userName", userName);
+		if (!(login_id.equals("")) && !(login_pass.equals("")) && !(user_name.equals(""))
+				&& !(address.equals(""))) {
+			session.put("login_id", login_id);
+			session.put("login_pass", login_pass);
+			session.put("user_name", user_name);
+			session.put("address", address);
 		} else {
 			setErrorMassage("未入力の項目があります。");
 			result = ERROR;
@@ -26,28 +29,36 @@ public class UserCreateConfirmAction extends ActionSupport implements SessionAwa
 		return result;
 	}
 
-	public String getLoginUserId() {
-		return loginUserId;
+	public String getLogin_id() {
+		return login_id;
 	}
 
-	public void setLoginUserId(String loginUserId) {
-		this.loginUserId = loginUserId;
+	public void setLogin_id(String login_id) {
+		this.login_id = login_id;
 	}
 
-	public String getLoginPassword() {
-		return loginPassword;
+	public String getLogin_pass() {
+		return login_pass;
 	}
 
-	public void setLoginPassword(String loginPassword) {
-		this.loginPassword = loginPassword;
+	public void setLogin_pass(String login_pass) {
+		this.login_pass = login_pass;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUser_name() {
+		return user_name;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	@Override

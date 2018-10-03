@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,12 +11,10 @@
 </head>
 <body>
 	<header>
-		<div id="nameIntroduction">
-			<a href='<s:url action="GoHomeAction"/>'><img
-				src="WebContent/images/logo.tif" alt="yonezonlogo"></a>
-		</div>
 
 		<ul>
+			<li><a href='<s:url action="GoHomeAction"/>'><input
+					type="button" class="button" value="Yonezon"> </a>
 			<li><select name="category_id">
 					<option value="1">全てのカテゴリー</option>
 					<option value="2">本</option>
@@ -25,12 +24,12 @@
 			<li><input type="hidden" name="retrievalFlg" value="1">
 				<input type="text" name="keywords" placeholder="キーワードを入力" id="text">
 			</li>
+			<li><s:if test='#session.containsKey("login_id")'>
+					<a href='<s:url action="MyPageAction"/>'><input type="button"
+						value="アカウントサービス" class="button"> </a>
+				</s:if></li>
 
-			<s:if test='#session.containsKey("login_id")'>
-				<li>アカウントサービス</li>
-			</s:if>
-
-			<li><s:if test='#session.contentsKey("login_id")'>
+			<li><s:if test="#session.id != null">
 					<a href='<s:url action="LogoutAction"/>'><input type="button"
 						value="サインアウト" class="button"> </a>
 				</s:if> <s:else>
@@ -42,7 +41,8 @@
 			<li>注文履歴</li>
 
 			<li><a href='<s:url action="HomeAction"/>'><img
-					src="WebContent/images/cart.png" alt="cart"></a></li>
+					src="images/cart.png" alt="cart" width="90" height="65"
+					class="cartButton"></a></li>
 
 		</ul>
 	</header>

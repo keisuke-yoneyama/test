@@ -12,71 +12,39 @@
 <meta name="keywords" content="" />
 <link rel="stylesheet" href="./css/style.css" />
 <title>Home画面</title>
-
-<style type="text/css">
-body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	letter-spacing: 1px;
-	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #333;
-	background: #fff;
-}
-
-table {
-	text-align: center;
-	margin: 0 auto;
-}
-
-/*================ ECsite LAYOUT==========================*/
-#top {
-	width: 780px;
-	margin: 30px auto;
-	border: 1px solid #333;
-}
-
-#header {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-}
-
-#main {
-	width: 100%;
-	height: 500px;
-	text-align: center;
-}
-
-#footer {
-	width: 100%;
-	height: 80px;
-	background-color: black;
-	clear: both;
-}
-
-#text-center {
-	display: inline-block;
-	text-align: center;
-}
-</style>
 </head>
 <body>
 	<div id="container">
 		<jsp:include page="header.jsp" />
 		<div id="main" class="clear">
-			<div id="top">
+
+
+
+			<div id="top" style="height: 97px;">
 				<p>ホーム画面</p>
 			</div>
+			<s:if test='#session.containsKey("user_name")'>
+				<h2>
+					<s:property value="#session.user_name" />
+					さん、こんにちは！
+				</h2>
+			</s:if>
+
+			<s:if test='#session.containsKey("address")'>
+				<h2>お届け先:
+					<s:property value="#session.user_name" />さん<br>
+					<s:property value="#session.address" />にお届け
+				</h2>
+			</s:if>
+
+
+
 			<div id="text-center">
 				<s:form action="HomeAction">
 					<s:submit value="商品購入" />
 				</s:form>
 
-				<s:form action="AdminAction">
-					<s:submit value="管理者ページ" />
-				</s:form>
+
 
 				<s:if test="#session.id != null">
 					<p>

@@ -13,6 +13,7 @@ create table login_user_transaction(
 	login_pass varchar(16),
 	user_name varchar(50),
 	is_admin varchar(1),
+	address varchar(50),
 	insert_date datetime,
 	updated_date datetime
 );
@@ -44,5 +45,5 @@ create table user_buy_item_transaction(
 
 INSERT INTO item_info_transaction(item_name,item_price,item_stock)VALUES("ノートBook",100,50);
 
-INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin)VALUES("internous","internous01","test", "0");
-INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin)VALUES("admin","admin","test", "1");
+INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin,address)VALUES("internous","internous01","test", "0","東京都葛飾区okudo");
+INSERT INTO login_user_transaction(login_id,login_pass,user_name,is_admin,address)VALUES("admin","admin","test", "1","tokyo2_16_7");

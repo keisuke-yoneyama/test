@@ -24,7 +24,7 @@ public class AdminLoginAction extends ActionSupport implements SessionAware {
 		session.put("loginUser", loginDTO);
 
 		if (((LoginDTO) session.get("loginUser")).getLoginFlg()) {
-			if (((LoginDTO) session.get("loginUser")).getIsAdmin().equals("1")) {
+			if (((LoginDTO) session.get("loginUser")).getIsAdmin()== 1) {
 				result = "admin";
 			}
 		}

@@ -26,8 +26,8 @@
 			<div>
 				<h2>サインインをしてより便利に</h2>
 				<s:form action="LoginAction">
-					<s:textfield name="loginUserId" />
-					<s:password name="loginPassword" />
+					<s:textfield name="login_id" />
+					<s:password name="login_pass" />
 					<s:submit value="ログイン" />
 				</s:form>
 				<br />

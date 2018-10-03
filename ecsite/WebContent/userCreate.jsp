@@ -31,15 +31,19 @@
 					<s:form action="UserCreateConfirmAction">
 						<tr>
 							<td><label>ログインID:</label></td>
-							<td><input type="text" name="loginUserId" value="" /></td>
+							<td><input type="text" name="login_id" value="" /></td>
 						</tr>
 						<tr>
 							<td><label>ログインPASS:</label></td>
-							<td><input type="text" name="loginPassword" value="" /></td>
+							<td><input type="text" name="login_pass" value="" /></td>
 						</tr>
 						<tr>
 							<td><label>ユーザー名:</label></td>
-							<td><input type="text" name="userName" value="" /></td>
+							<td><input type="text" name="user_name" value="" /></td>
+						</tr>
+						<tr>
+							<td><label>宛先:</label></td>
+							<td><input type="text" name="address" value="" /></td>
 						</tr>
 						<s:submit value="登録" />
 					</s:form>

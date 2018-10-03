@@ -9,29 +9,33 @@ public class LoginDTO {
 
 	private String user_name;
 
-	private String is_admin;//adminの情報を入れる変数
+	private int is_admin;//adminの情報を入れる変数
 
-	public String getIsAdmin(){//adminのげッター
+	private String address;
+
+
+
+	public int getIsAdmin(){//adminのげッター
 		return is_admin;
 	}
 
-	public void setIsAdmin(String is_admin){//adminのセッター
+	public void setIsAdmin(int is_admin){//adminのセッター
 		this.is_admin = is_admin;
 	}
 
-	public String getLoginId() {
+	public String getLogin_id() {
 		return login_id;
 	}
 
-	public void setLoginId(String login_id) {
+	public void setLogin_id(String login_id) {
 		this.login_id = login_id;
 	}
 
-	public String getLoginPassword() {
+	public String getLogin_pass() {
 		return login_pass;
 	}
 
-	public void setLoginPassword(String login_pass) {
+	public void setLogin_pass(String login_pass) {
 		this.login_pass = login_pass;
 	}
 
@@ -49,5 +53,13 @@ public class LoginDTO {
 
 	public void setLoginFlg(boolean loginFlg) {
 		this.loginFlg = loginFlg;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 }
