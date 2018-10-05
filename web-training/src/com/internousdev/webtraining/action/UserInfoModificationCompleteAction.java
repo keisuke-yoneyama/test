@@ -14,15 +14,14 @@ public class UserInfoModificationCompleteAction extends ActionSupport implements
 	private UserInfoDAO userInfoDAO = new UserInfoDAO();
 
 	public String execute() throws SQLException {
-		if (!session.containsKey("userId")) {
+		if(!session.containsKey("userId")) {
 			return ERROR;
 		}
-		userInfoDAO.updateUser(session.get("userId").hashCode(), session.get("user_id_provisional").toString(),
-				session.get("password_provisional").toString(), session.get("family_name_provisional").toString(),
-				session.get("first_name_provisional").toString(),
-				session.get("family_name_kana_provisional").toString(),
-				session.get("first_name_kana_provisional").toString(), session.get("gender_provisional").hashCode(),
-				session.get("email_provisional").toString());
+		userInfoDAO.updateUser
+				(session.get("userId").hashCode(), session.get("user_id_provisional").toString(), session.get("password_provisional").toString(),
+				session.get("family_name_provisional").toString(), session.get("first_name_provisional").toString(),
+				session.get("family_name_kana_provisional").toString(),session.get("first_name_kana_provisional").toString(),
+				session.get("gender_provisional").hashCode(), session.get("email_provisional").toString());
 		String result = SUCCESS;
 
 		return result;

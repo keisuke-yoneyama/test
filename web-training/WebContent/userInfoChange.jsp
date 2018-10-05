@@ -17,10 +17,10 @@
 		</div>
 		<div class="marginLeft">
 			<s:if test="userInfoList == null">
-				<h3>ユーザ情報はありません。</h3>
+				<h3>商品情報はありません。</h3>
 			</s:if>
 			<s:elseif test="message == null">
-				<h3>ユーザ情報は以下になります。</h3>
+				<h3>商品情報は以下になります。</h3>
 			<table border="1" class="ShowData">
 				<tr>
 					<th>姓</th>
