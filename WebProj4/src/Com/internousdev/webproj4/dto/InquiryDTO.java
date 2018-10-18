@@ -1,6 +1,7 @@
 package Com.internousdev.webproj4.dto;
 
 public class InquiryDTO {
+
 	private String name;
 	private String qtype;
 	private String body;

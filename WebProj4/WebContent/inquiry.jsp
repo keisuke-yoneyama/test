@@ -11,7 +11,7 @@
 	<s:form method="post" action="InquiryCompleteAction">
 		名前:<input type="text" name="name" />
 		<br>
-		お問い合わせの種類:<br>
+		お問い合せの種類:<br>
 		<select name="qtype">
 			<option value="company">会社について</option>
 			<option value="product">製品について</option>
@@ -19,9 +19,9 @@
 		</select>
 		<br>
 		お問い合わせ内容:
-		<s:textarea name="body" />
+		<s:textarea name="body"/>
 		<br>
-		<s:submit value="登録" />
+		<s:submit value="登録"/>
 	</s:form>
 </body>
 </html>

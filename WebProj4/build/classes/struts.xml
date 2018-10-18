@@ -23,7 +23,7 @@
 			<result name="error">loginError.jsp</result>
 		</action>
 
-		<action name="InquiryAction" class="Com.internousdev.webproj4.action.InquiryAction "
+		<action name="InquiryAction" class="Com.internousdev.webproj4.action.InquiryAction"
 			method="execute">
 			<result name="success">inquiry.jsp</result>
 		</action>
@@ -32,6 +32,11 @@
 			class="Com.internousdev.webproj4.action.InquiryCompleteAction"
 			method="execute">
 			<result name="success">inquiryComplete.jsp</result>
+		</action>
+
+		<action name="TestAction" class="Com.internousdev.webproj4.action.TestAction"
+			method="execute">
+			<result name="success">test.jsp</result>
 		</action>
 	</package>
 </struts>

@@ -19,11 +19,12 @@ public class InquiryCompleteAction extends ActionSupport {
 		String ret = ERROR;
 		InquiryCompleteDAO dao = new InquiryCompleteDAO();
 		int count = dao.insert(name, qtype, body);
-		if (count > 0) {
-			inquiryDTOList = dao.select();
+		if (count > 0) {// countにはexecuteUpdateの戻り値が入る(0,or1)
+			inquiryDTOList = dao.select();// DAOのselectで登録内容をもってくる
 
 			ret = SUCCESS;
 		}
+
 		return ret;
 	}
 

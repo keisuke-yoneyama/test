@@ -19,7 +19,7 @@ public class TestDAO {
 			ps.setString(2, password);
 			int i = ps.executeUpdate();
 			if (i > 0) {
-				System.out.println(i + "Œ“o˜^‚³‚ê‚Ü‚µ‚½");
+				System.out.println(i + "ä»¶ç™»éŒ²ã•ã‚Œã¾ã—ãŸ");
 				ret = i;
 			}
 		} catch (SQLException e) {
